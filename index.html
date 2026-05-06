@@ -1,158 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jai Club Official</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREDICTOR Y | JOIN NOW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --toxic-lime: #ccff00;
+            --bg-black: #080808;
+            --card-glass: rgba(20, 20, 20, 0.95);
+        }
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family: 'Segoe UI', sans-serif;
-}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body{
-background:#050816;
-color:#fff;
-text-align:center;
-}
+        body {
+            background-color: var(--bg-black);
+            background-image: 
+                linear-gradient(rgba(204, 255, 0, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(204, 255, 0, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            color: #fff;
+        }
 
-.container{
-padding:20px;
-max-width:400px;
-margin:auto;
-}
+        .main-container {
+            position: relative;
+            z-index: 10;
+            width: 90%;
+            max-width: 400px;
+            background: var(--card-glass);
+            border: 2px solid var(--toxic-lime);
+            border-radius: 30px;
+            padding: 50px 25px;
+            text-align: center;
+            box-shadow: 0 0 40px rgba(204, 255, 0, 0.2);
+        }
 
-/* Top Active Bar */
-.active-bar{
-color:#38bdf8;
-font-size:14px;
-margin-bottom:20px;
-}
+        .header-title {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 24px;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
 
-/* Logo Circle */
-.logo{
-width:150px;
-height:150px;
-border-radius:50%;
-border:3px solid #38bdf8;
-margin:20px auto;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:22px;
-font-weight:bold;
-background:#0f172a;
-box-shadow:0 0 30px rgba(56,189,248,0.7);
-}
+        .header-title span {
+            color: var(--toxic-lime);
+            text-shadow: 0 0 15px rgba(204, 255, 0, 0.5);
+        }
 
-/* Headings */
-.title{
-font-size:26px;
-font-weight:bold;
-margin:10px 0;
-}
+        .warning-strip {
+            background: var(--toxic-lime);
+            color: #000;
+            font-weight: 900;
+            font-size: 11px;
+            padding: 5px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 20px -25px 30px -25px;
+        }
 
-.highlight{
-color:#22c55e;
-}
+        .timer-wrap {
+            margin-bottom: 35px;
+        }
 
-/* Progress Bar */
-.progress{
-height:10px;
-background:#1e293b;
-border-radius:10px;
-margin:20px 0;
-overflow:hidden;
-}
+        #timer-text {
+            font-size: 75px;
+            font-weight: 900;
+            letter-spacing: -4px;
+            color: #fff;
+            line-height: 1;
+        }
 
-.progress span{
-display:block;
-height:100%;
-width:80%;
-background:linear-gradient(to right,#38bdf8,#22c55e);
-}
+        .sub-label {
+            font-size: 10px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-top: 10px;
+        }
 
-/* Button */
-.btn{
-display:block;
-padding:18px;
-margin:25px 0;
-border-radius:50px;
-font-size:18px;
-font-weight:bold;
-text-decoration:none;
-color:#fff;
-background:linear-gradient(45deg,#3b82f6,#06b6d4);
-box-shadow:0 0 20px rgba(56,189,248,0.8);
-transition:0.3s;
-}
+        /* Fixed-Style High Conversion Button */
+        .join-trigger {
+            display: block;
+            background: var(--toxic-lime);
+            color: #000 !important;
+            text-decoration: none;
+            padding: 24px;
+            border-radius: 15px;
+            font-weight: 900;
+            font-size: 20px;
+            text-transform: uppercase;
+            box-shadow: 0 10px 30px rgba(204, 255, 0, 0.4);
+            transition: 0.3s;
+            animation: pulse-border 1.5s infinite;
+        }
 
-.btn:hover{
-transform:scale(1.05);
-box-shadow:0 0 35px rgba(56,189,248,1);
-}
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 0 0 rgba(204, 255, 0, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(204, 255, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(204, 255, 0, 0); }
+        }
 
-/* Countdown */
-.timer{
-display:flex;
-justify-content:space-between;
-margin-top:20px;
-background:#0f172a;
-padding:15px;
-border-radius:15px;
-}
+        .join-trigger:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.1);
+        }
 
-.timer div{
-flex:1;
-}
-
-.timer span{
-font-size:22px;
-font-weight:bold;
-color:#38bdf8;
-}
-
-/* Footer */
-.footer{
-margin-top:20px;
-font-size:12px;
-color:#94a3b8;
-}
-</style>
+        .system-footer {
+            margin-top: 30px;
+            font-size: 9px;
+            color: #444;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+    <div class="main-container">
+        <h1 class="header-title">PREDICTION BY <br><span>PREDICTOR Y</span></h1>
+        
+        <div class="warning-strip">Limited Slots Available</div>
 
-<div class="active-bar">🟢 954 MEMBERS ACTIVE</div>
+        <div class="timer-wrap">
+            <div id="timer-text">05:00</div>
+            <div class="sub-label">Access Window Closing</div>
+        </div>
 
-<div class="logo">JAI CLUB</div>
+        <a href="https://t.me/+Lmtx81Mv-NYxNDc1" class="join-trigger">
+            JOIN TELEGRAM NOW
+        </a>
 
-<div class="title">RECOVER ALL LOSSES</div>
-<div class="title highlight">95% ACCURATE SIGNALS 🔥</div>
+        <div class="system-footer">Encrypted Link • Verified Channel</div>
+    </div>
 
-<div class="progress"><span></span></div>
-
-<a href="https://t.me/+fd_dagxBH901NDk1" class="btn" target="_blank">
-🚀 JOIN JAI CLUB NOW
-</a>
-
-<div class="timer">
-<div><span>00</span><br>Days</div>
-<div><span>09</span><br>Hrs</div>
-<div><span>35</span><br>Min</div>
-<div><span>03</span><br>Sec</div>
-</div>
-
-<div class="footer">
-© 2026 Jai Club
-</div>
-
-</div>
-
+    <script>
+        // Countdown Clock
+        let timeRemaining = 300;
+        const display = document.getElementById('timer-text');
+        
+        setInterval(() => {
+            let minutes = Math.floor(timeRemaining / 60);
+            let seconds = timeRemaining % 60;
+            display.innerText = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+            if (--timeRemaining < 0) timeRemaining = 300;
+        }, 1000);
+    </script>       
 </body>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2694436390931602');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2694436390931602&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </html>
